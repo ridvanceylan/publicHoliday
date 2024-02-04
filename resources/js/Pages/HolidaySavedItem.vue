@@ -71,7 +71,7 @@ export default {
       this.isModalOpen = true;
     this.selectedDate = this.holiday.date;
     this.holidayName = this.holiday.name || '';
-    this.note = this.note || '';
+    this.note = this.holiday.note || '';
   
     },
     closeModal() {
