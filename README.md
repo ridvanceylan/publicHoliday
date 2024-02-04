@@ -7,7 +7,7 @@ npm run dev
 ## BE
 .env.example dosyasını .env çevirip db connection aşağıdaki gibi olmalı.
 DB_CONNECTION=sqlite
-DB_DATABASE=/Users/ridvanceylan/Downloads/publicHoliday-main/laravel (full path)
+DB_DATABASE=/Users/ridvanceylan/Downloads/publicHoliday-main/laravel (örnek full path )
 
 
 composer install
