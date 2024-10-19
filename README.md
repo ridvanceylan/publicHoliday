@@ -1,27 +1,74 @@
+# Project Setup Guide
 
-## FE
-npm install
-npm run dev
-----------------------------------------------------
+This guide will walk you through setting up both the frontend and backend of the project.
 
-## BE
-.env.example dosyasını .env çevirip db connection aşağıdaki gibi olmalı.
-DB_CONNECTION=sqlite
-DB_DATABASE=/Users/ridvanceylan/Downloads/publicHoliday-main/laravel (örnek full path )
+## Frontend (FE)
 
+1. Install the required dependencies:
 
-composer install
-php artisan migrate:reset
-php artisan migrate
-php artisan config:cache
+    ```bash
+    npm install
+    ```
 
-php artisan serve
+2. Start the development server:
 
-------------------------------------------------
+    ```bash
+    npm run dev
+    ```
 
-500 hatası alırsak 
+---
 
-php artisan key:generate
+## Backend (BE)
 
-php artisan config:cache
+1. Copy the `.env.example` file and rename it to `.env`:
 
+    ```bash
+    cp .env.example .env
+    ```
+
+2. Open the `.env` file and update the database connection settings as follows:
+
+    ```env
+    DB_CONNECTION=sqlite
+    DB_DATABASE=/Users/ridvanceylan/Downloads/publicHoliday-main/laravel  # Example full path
+    ```
+
+3. Install the backend dependencies:
+
+    ```bash
+    composer install
+    ```
+
+4. Reset and migrate the database:
+
+    ```bash
+    php artisan migrate:reset
+    php artisan migrate
+    ```
+
+5. Clear and cache the configuration:
+
+    ```bash
+    php artisan config:cache
+    ```
+
+6. Start the server:
+
+    ```bash
+    php artisan serve
+    ```
+
+---
+
+## If You Encounter a 500 Error
+
+1. Run the following commands to regenerate the application key and refresh the cache:
+
+    ```bash
+    php artisan key:generate
+    php artisan config:cache
+    ```
+
+---
+
+Now you should be able to access the project in both development environments.
